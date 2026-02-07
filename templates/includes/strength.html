@@ -1,0 +1,61 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block title %} | Strength {% endblock %}
+
+{% block content %}
+<div class="modal fade" id="staticStrengths" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title fs-5" id="staticBackdropLabel">
+          <h1 class="flex items-center justify-center text-xl font-semibold mt-8 mb-5">My Graphic Design Abilities</h1>
+
+          <div class="w-full flex flex-col items-center justify-center"></div>
+                    
+        </div>
+        <button type="button" class="btn-close fs-5 fw-bold text-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+      <div class="p-5 m-4 bg-red-700 rounded-md w-[80%] mr-[10%]">
+        <strong class="mb-4 text-xl font-semibold flex items-center justify-center">Graphic Design Tools</strong>
+        <div class="flex items-center gap-1">
+          <label for="" class="text-git text-lg font-semibold">Graphic Designer:</label>
+          <input type="range" name="range" id=range class="GIT w-[70%]">
+          <span class="text-white">70%</span>
+        </div>
+
+        <div class="">
+          <strong>TOOLs</strong>
+          <ul class="list-disc list-inside">
+            <div class="flex items-center gap-1">
+              <label for="" class="text-mercurial text-lg font-semibold">Corel Draw:</label>
+              <input type="range" name="range" id=range class="MERCURIAL w-[80%]">
+              <span class="text-white">80%</span>
+            </div>
+            <div class="flex items-center gap-1">
+              <label for="" class="text-mercurial text-lg font-semibold">Canvas:</label>
+              <input type="range" name="range" id=range class="MERCURIAL w-[50%]">
+              <span class="text-white">50%</span>
+            </div>
+            <div class="flex items-center gap-1">
+              <label for="" class="text-mercurial text-lg font-semibold">Photoshop:</label>
+              <input type="range" name="range" id=range class="MERCURIAL w-[40%]">
+              <span class="text-white">40%</span>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    </div>
+</div>
+</div>
+
+</div>
+
+{% endblock content %}          

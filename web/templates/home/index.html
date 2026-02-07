@@ -1,0 +1,125 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block title %} | Home {% endblock title %}
+
+
+{% block content %} 
+<div class="main-container">
+    <div class="header-content">
+      {% include 'includes/header.html' %}
+    </div>
+
+    <main class="container">
+      <div class="content-in-main-page">
+        <div class="left-side">
+          <div class="photo">
+            <img src="{% static 'assets/fidenke.png' %}" alt="photo">
+            <div class="drop-message">
+              <!-- <p>Drop message here</p> -->
+            </div>
+          </div>
+          <div class="user_authenticated-container">
+            <div class="user_authenticated" id="message-container">
+              {% if messages %}
+                {% for message in messages %}
+                  {% if message.tags == 'error' %}
+                   <span><h4 class="md:text-rose-950 sm:text-white sm:font-semibold">{{ message }}</h4></span>   
+                   {% else %}
+                     <span><h4 class="md:text-blue-950 sm:text-white sm:font-semibold">{{ message }}</h4></span>
+                  {% endif %}
+                {% endfor %}  
+              {% endif %}   
+            </div>   
+          </div>
+        </div>
+
+        <div class="right-side">
+          <div class="auth-message">
+            <h1 class="greet-text">Hello!</h1>
+            <span class="user-text">
+              {% if user %} 
+                  {% if user.is_authenticated %}
+                    <span class="text-user-message mt-3 text-xl font-semibold">{{user.username}}</span>
+                      {% else %}
+                      <p class="text-user-message mt-3">You' re welcome.</p>
+                  {% endif %}    
+                
+              {% endif %}
+            </span>
+          </div>
+
+          <strong class="myName">
+            <span>I'm</span>
+            <p>Vincent Ozioma Fidelis</p>
+          </strong>
+
+          <div class="text-con">
+            <img src="{% static 'assets/web.jpg' %}" alt="">
+
+            <div class="textTyped typedText"></div>
+          </div>
+
+          <div class="c-s">
+            <img src="{% static '/assets/cs.png' %}" alt="">
+
+            <strong class="">Graphic Designer</strong>
+          </div>
+
+          <div class="social-icons">
+            <a href="https://github.com/Fidenke" target="_blank"><img src="{% static '/assets/github.png' %}" alt="" class="social-icon-img"></a>
+            <a href="https://linkedin.com/in/vincent-fidelis-b440a2225" target="_blank"><img src="{% static '/assets/linkedin.png' %}" alt="" class="social-icon-img"></a>
+            <a href="https://facebook.com/Fidenke" target="_blank"><img src="{% static '/assets/facebook.png' %}" alt="" class="social-icon-img"></a>
+            <a href="https://x.com/FidelisOzi9196" target="_blank"><img src="{% static '/assets/x.png' %}" alt="" class="social-icon-img"></a>
+          </div>
+
+          <div class="links">
+            <!-- <a href="#" class="contact-pointer" d></a> -->
+            <div class="btn-container">
+              <a href="" class="main-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <span class="btn-text">Contact me</span>
+                <span class="btn-icon"><i class="bi bi-arrow-up-right"></i></span>
+              </a>
+            </div>
+
+            <div class="btn-container">
+              <a href="{% static 'assets/me-resume.pdf' %}" download class="main-btn">
+                <span class="btn-text">Download CV</span>
+                <span class="btn-icon"><i class="fas fa-download"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+    </main>
+    
+  </div>
+
+  <div class="About">
+    {% include 'includes/about.html' %}
+  </div>
+
+  <div class="portfolio">
+    {% include 'includes/briefcase.html' %}
+  </div>
+
+  <div class="strengths">
+    {% include 'includes/strength.html' %}
+  </div>
+
+  <div class="contacts">
+    {% include 'includes/contact.html' %}
+  </div>
+  <div class="services">
+    {% include 'includes/services.html' %}
+  </div>
+
+  <footer>
+    <div class="footer-1">
+      <p class="footer-text d-flex mt-3 mb-5 fs-4 fw-semibold align-items-center justify-content-center text-light fw-bold text-lg">&copy; All rights reserved  <script>document.writeln(new Date().getFullYear());</script>  Macus Edidiong Cletus</p>
+    </div>
+  </footer>
+{% endblock content %}

@@ -1,0 +1,79 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block title %} | Contact Me{% endblock title %}
+
+  {% block content %}
+    <div class="contact-page">
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-3 fw-bold" id="exampleModalLabel">Contact Me</h1>
+                  <button type="button" class="btn-close fs-5 fw-bold text-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p class="text-dark fs-2 fw-bold">Please fill out the form below to send me a message, and I will get back to you as soon as possible.</p>
+                  <div class="flex items-center justify-evenly gap-10 mt-6 mb-6">
+                    <a href="mailto: vinozioms024@gmail.com" class="text-blue-700 hover:text-blue-800 text-xl font-semibold font-serif no-underline">E-mail Me</a>
+                    <a href="tel:+234 903 001 3880" class="text-blue-700 hover:text-blue-800 text-xl font-semibold font-serif no-underline">Call Me</a>
+                  </div>
+                  <form action="{% url 'contact' %}" class="contact-form" method="POST">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                      <label for="recipient-name" class="col-form-label text-dark fs-2 fw-bold">First Name:</label>
+                      <input type="text" name="first_name" class="form-control" placeholder="This is the format: John" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="recipient-name" class="col-form-label text-dark fs-2 fw-bold">Last Name:</label>
+                      <input type="text" name="last_name" class="form-control" placeholder="This is the format: Doe" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="recipient-name" class="col-form-label text-dark fs-2 fw-bold">Email:</label>
+                      <input type="email" name="email" class="form-control" placeholder="This is the format: info@edimars.com or normal valid email" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="recipient-name" class="col-form-label text-dark fs-2 fw-bold">Company Name:</label>
+                      <input type="text" name="company_name" class="form-control" placeholder="e.g.: Edimars" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="recipient-name" class="col-form-label text-dark fs-3 fw-bold">Company Website:</label>
+                      <input type="url" name="website" class="form-control" placeholder="This is the format: https://www.edimars.com" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="recipient-name" class="col-form-label text-dark fs-2 fw-bold">Company Telephone:</label>
+                      <input type="tel" name="phone_number" class="form-control" placeholder="This is the format: +234 702 345 6459" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="recipient-name" class="col-form-label text-dark fs-2 fw-bold">Subject:</label>
+                      <input type="text" name="subject" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="message-text" class="col-form-labeltext-dark fs-3 fw-bold">Message:</label>
+                      <textarea name="message" class="form-control" required></textarea>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="submit" class="btn btn-primary">Send message</button>
+                    </div>
+                  </form>
+                  
+              </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  {% endblock %}
+
+  <script>
+    //FOR CONTACT FORM IN CONTACT PAGE SECTION
+    document.querySelector(".contact-form").addEventListener('submit', function(e) {
+      const inputs = document.querySelectorAll('input[type="text"], textarea');
+      inputs.forEach(input => {
+        input.value = input.value.trim();
+      });
+    });
+  </script>

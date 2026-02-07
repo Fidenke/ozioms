@@ -1,0 +1,87 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block title %} | Services {% endblock %}
+
+{% block content %}
+  <div class="modal fade services" id="staticServices" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 text-dark fw-semibold" id="staticBackdropLabel">My Services</h1>
+          <button type="button" class="btn-close fs-5 fw-bold text-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <strong class="sub-title">I love designing beautiful eye-catching designs. Here are some of my services:</strong>
+          <div class="work-info">
+            <div>
+              <img src="{% static '/assets/TOSIN  PROJECT.jpg' %}" alt="Photo">
+              <p>
+                Designing flyer for Fashion Designer.
+              </p>
+            </div>
+            <div>
+              <img src="{% static '/assets/Recovered_GREAT 95.jpg' %}" alt="Photo">
+              <p>
+                Roll up banner.
+              </p>
+            </div>
+            <div>
+              <img src="{% static 'assets/DEDICATION 3.jpg' %}" alt="Photo">
+              <p>
+                Child dedication invitation card.
+              </p>
+            </div>
+            <div>
+              <img src="{% static 'assets/KITCHEN GLORY.jpg' %}" alt="Photo">
+              <p>
+                Fast food and eatery flyers
+              </p>
+            </div>
+            <div>
+              <img src="{% static 'assets/CHIKANYIMA.png' %}" alt="Photo">
+              <p>
+                Logos
+              </p>
+            </div>
+            <div>
+              <img src="{% static 'assets/' %}" alt="Photo">
+              <p>
+                 Eye catching Branding for your companirs.
+              </p>
+            </div>
+          </div>
+          <div class="services-list">
+            <div>
+              <h2>Graphic Designer</h2>
+              <p>
+                I am a creative graphic designer with a strong eye for detail and a passion for visual storytelling. I design purposeful visuals that clearly, strengthen brands, and connect with the right audience.
+
+              </p>
+              <a href="https://github.com/Fidenke">Learn More</a>
+            </div>
+            <div>
+              <h2>Freelancer</h2>
+              <p>
+                As a freelancer, i work closely with clients to understand their goals and translate ideas into clean, effective, and engaging visuals. Ivalue clear communication, attention to detail, and timely delivery on every project. 
+              </p>
+              <a href="https://github.com/EdiCeM24">Learn More</a>
+            </div>
+            <div>
+              <h2>Instructor</h2>
+              <p>
+                We offer free online courses on various designs and Logos. We also provide mentorship to help you improve your skills both beginnings, imtermediary, to a professional graphic designer.
+              </p>
+              <a href="https://youtube.com/">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Understood</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

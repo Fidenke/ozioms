@@ -1,0 +1,43 @@
+{% load static %}
+
+<div class="header">
+  <div class="navbar">
+    <div class="my-logo">
+      <a href="{% url 'home' %}" class="myLogo">
+        <img src="{% static 'assets/LOGO.jpg' %}" alt="">
+        <span class="logo-text">
+          Fidenke
+        </span>
+      </a>
+    </div>
+
+    <div class="nav-links">
+      <button type="button" class="aboutBtn btn btn-outline-light about-page-btn" id="#modalAbout" title="About" data-bs-toggle="modal" data-bs-target="#aboutModal"><i class="bi bi-person custom-icon fs-4 text-lg fw-bold"></i></button>
+
+      <button type="button" class="contactBtn btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat" title="Contact"><i class="bi bi-envelope fs-4 text-lg fw-bold"></i></button>
+
+      <button type="button" class="portfolioBtn btn btn-outline-light no-underline" data-bs-toggle="modal" data-bs-target="#staticBackdrop" title="Portfolio"><i class="bi bi-briefcase fs-4 text-lg fw-bold"></i></button>
+
+      <button type="button" class="strengthBtn btn btn-outline-light" id="loginBtn-open" data-bs-toggle="modal" data-bs-target="#staticStrengths" title="Ability"><i class="fa-solid fa-fire-flame-simple fs-4 text-lg fw-bold"></i></button>
+
+      <button type="button" class="servicesBtn btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#staticServices" title="Services"><i class="fa-solid fa-server fs-4 text-lg fw-bold"></i></button>
+    </div>
+
+    <div class="signupLoginBtn">
+      <div class="loginBtn gap-[30%]">
+        {% if user.is_authenticated %}
+          <a href="{% url 'logout' %}" class="logoutBtn no-underline text-md font-semibold text-white">Logout</a>
+          <div class="auth-contents">
+            {% else %} 
+              <a href="{% url 'signup' %}" class="" target="_blank">
+                <button type="button" class="signupBtn btn btn-outline-light no-underline" id="signupBtn" title="Signup"><i class="fa-solid fa-house-lock"></i></button> 
+              </a>
+              <a href="{% url 'login' %}" class="" target="_blank">
+                <button type="button" class="loginBtn btn btn-outline-light no-underline" id="loginBtn-open" title="Login"><i class="fa-solid fa-right-to-bracket"></i></button>
+              </a>
+          </div>
+          {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
