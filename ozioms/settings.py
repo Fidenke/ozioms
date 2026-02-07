@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'allauth',
     'allauth.account',
-
+    
     # Optional -- requires install using `django-allauth[socialaccount]`.
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
@@ -169,11 +169,11 @@ STATICFILES_DIRS = [
   os.path.join(BASE_DIR / 'static')
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles', 'static')
+STATIC_ROOT = os.path.join(BASE_DIR / 'staticfiles')
 
 if not DEBUG:
     # Tell Django to copy static assets into a path called `staticfiles` (this is specific to Render)
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles', 'static')
+    STATIC_ROOT = os.path.join(BASE_DIR / 'staticfiles')
 
     # Enable the WhiteNoise storage backend, which compresses static files to reduce disk use
     # and renames the files with unique names for each version to support long-term caching
@@ -185,11 +185,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR / 'media')
 
  # Enable the WhiteNoise storage backend
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-
-# Media files (User uploaded files)
-MEDIA_URL = '/'
-MEDIA_ROOT = os.path.join(BASE_DIR / 'media')
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = 'login'
