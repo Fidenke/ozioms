@@ -1,0 +1,194 @@
+@media screen and (max-width: 668px) {
+  body {
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+  }
+  .myLogo img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .content-in-main-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    overflow-y: auto;
+    margin-top: 10%;
+  }
+  .left-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--color-dark-1);
+    width: 100%;
+    height: 100%;
+    margin-top: -14%;
+    padding: 3rem 0;
+    margin-left: 5%;
+  }
+  .photo {
+    position: relative;
+    margin-top: 10%;
+    filter: grayscale(0.5);
+    object-fit: cover;
+    opacity: 1;
+    transition: all .4s ease-in-out;
+  }
+  .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid var(--color-dark-2);
+    margin-top: 58%;
+    margin-left: 5%;
+    top: 10%;
+  }
+  .photo img:hover {
+    filter: grayscale(0);
+    opacity: 1;
+  }
+  .right-side {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--color-dark-1);
+    width: 100%;
+    height: 100%;
+    margin-top: 10%;
+  }
+  .user_authenticated span {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-white);
+  }
+  .text-user-message {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--color-white);
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+  /** ABOUT PAGE SECTION **/
+  .icons-tl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-direction: column;
+  }
+  .birth-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .right-hand-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+  } 
+  .about-btn-container {
+    margin-right: 10%;
+  }
+  
+  /** PORTFOLIO PAGE SECTION **/
+  .portfolios {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  /** SERVICES PAGE SECTION **/
+  .work-info {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 30px 40px;
+    gap: 1.5rem;
+    margin-top: 30px;
+  }
+  .services-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column: 40px;
+    grid-row: 40px;
+    gap: 40px;
+    margin-top: 50px;
+    padding: 30px 40px;
+  }
+  /** SIGNUP PAGE SECTION **/
+  .form-control-input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 968px) {
+  body {
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+  }
+  .content-in-main-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    margin-top: 10%;
+  }
+  .left-side {
+    margin-right: 10%;
+  }
+  /* .right-side {
+    width: 60%;
+  } */
+  .links {
+    gap: 40px;
+  }
+
+
+   /** PORTFOLIO PAGE SECTION **/
+  .portfolios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  /** SIGNUP PAGE SECTION **/
+  .form-control-input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  } 
+}
