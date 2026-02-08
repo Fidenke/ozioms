@@ -39,3 +39,15 @@ body {
   text-decoration: underline;
   transition: all .2s ease-in-out;
 }
+
+
+
+
+
+@media screen and (max-width: 668px) {
+  .terms {
+    padding: 30px 40px;
+    width: 80%;
+    background-color: antiquewhite;
+  }
+}

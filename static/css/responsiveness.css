@@ -29,7 +29,7 @@
     height: 100%;
     margin-top: -14%;
     padding: 3rem 0;
-    margin-left: 5%;
+    margin-left: 7%;
   }
   .photo {
     position: relative;
@@ -45,7 +45,7 @@
     object-fit: cover;
     border-radius: 10px;
     border: 2px solid var(--color-dark-2);
-    margin-top: 58%;
+    margin-top: 50%;
     margin-left: 5%;
     top: 10%;
   }
