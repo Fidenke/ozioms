@@ -104,6 +104,19 @@
   .about-btn-container {
     margin-right: 10%;
   }
+  .testimonies {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    font-size: 1.2rem;
+  }
+  .testimonies h3 h5 p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: aqua;
+  }
   
   /** PORTFOLIO PAGE SECTION **/
   .portfolios {
