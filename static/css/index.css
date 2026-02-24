@@ -355,6 +355,9 @@ a {
   gap: 2px;
   margin-right: 30%;
 }
+.education {
+  margin-bottom: 10px;
+}
 .birth-details {
   display: flex;
   align-items: center;
