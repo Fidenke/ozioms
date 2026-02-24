@@ -358,6 +358,9 @@ a {
 .education {
   margin-bottom: 10px;
 }
+.article-text {
+  margin-top: 2%;
+}
 .birth-details {
   display: flex;
   align-items: center;
